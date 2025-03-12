@@ -46,7 +46,7 @@ def get_sorted_weights(file_weights):
     """
     # 按权重排序，返回一个包含 (文件名, 权重) 的列表
     sorted_weights = sorted(file_weights.items(), key=lambda x: x[1], reverse=True)
-    files = [i[0] for i in sorted_weights]
+    files = [i[0] for i in sorted_weights if i[1] > 0]
     return files
 
 

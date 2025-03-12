@@ -225,7 +225,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "增伤装置",
             "description": "描述",
             "category": "车",
             "file_path": "icon\\zengshangzhuangzhi.png",
@@ -409,8 +409,8 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
-            "description": "描述",
+            "name": "温压冲击",
+            "description": "增加温压弹冲击伤害和爆炸击退",
             "category": "温压弹",
             "file_path": "icon\\wen-ya-chong-ji.png",
             "weight": 1,
@@ -446,7 +446,7 @@
             "category": "默认",
             "file_path": "icon\\button\\0-2queding.png",
             "weight": 1,
-            "confidence": 0.9
+            "confidence": 0.8
         },
         {
             "name": "技能名称",
@@ -505,20 +505,28 @@
             "confidence": 0.8
         },
         {
-            "name": "技能名称",
+            "name": "选择技能",
             "description": "默认技能描述",
-            "category": "默认",
+            "category": "按钮",
             "file_path": "icon\\button\\xuan-ze-ji-neng.png",
+            "weight": 0,
+            "confidence": 0.75
+        },
+        {
+            "name": "电极柱",
+            "description": "获得电极柱",
+            "category": "电极柱",
+            "file_path": "icon\\dian-ji-zhu.png",
             "weight": 1,
             "confidence": 0.9
         },
         {
-            "name": "技能名称",
-            "file_path": "icon\\dian-ji-zhu.png",
-            "category": "默认",
-            "weight": 1,
-            "confidence": 0.9,
-            "description": "默认技能描述"
+            "name": "跃迁电子",
+            "description": "学习跃迁电子",
+            "category": "跃迁电子",
+            "file_path": "icon\\yue-qian-dain-zi.png",
+            "weight": 10,
+            "confidence": 0.9
         }
     ]
 }

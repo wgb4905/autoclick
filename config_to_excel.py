@@ -2,6 +2,7 @@
 
 import json
 import pandas as pd
+import update_config
 
 def json_to_excel(json_file, excel_file):
     """
@@ -41,6 +42,9 @@ def excel_to_json(excel_file, json_file):
         # 将配置写入 JSON 文件
         with open(json_file, 'w', encoding='utf-8') as f:
             json.dump(config, f, ensure_ascii=False, indent=4)
+
+        # 更新confidence_dict.json
+        update_config.generate_confidence_dict(config)
         
         print(f"成功更新配置文件: {json_file}")
     
