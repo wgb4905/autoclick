@@ -60,7 +60,7 @@ if __name__ == "__main__":
     excel_file = 'config.xlsx'
     
     # 调用函数，将 JSON 转换为 Excel
-    # json_to_excel(json_file, excel_file)
+    json_to_excel(json_file, excel_file)
     
     # 调用函数，根据 Excel 更新 JSON 配置文件
-    excel_to_json(excel_file, json_file)
+    # excel_to_json(excel_file, json_file)

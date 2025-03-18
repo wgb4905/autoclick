@@ -3,6 +3,11 @@ import json
 import time
 import pyautogui
 import subprocess
+import cv2
+import numpy as np
+
+result={}
+namedict={}
 
 def load_config(config_file):
     """
@@ -23,6 +28,34 @@ def save_config(config_file, config):
     with open(config_file, 'w', encoding='utf-8') as f:
         json.dump(config, f, ensure_ascii=False, indent=4)
 
+def find_icon_with_opencv(icon_path, screenshot=None, threshold=0.8):
+    """
+    使用 OpenCV 进行模板匹配查找图标
+    :param icon_path: 图标文件路径
+    :param screenshot: 屏幕截图（可选）
+    :param threshold: 匹配阈值
+    :return: 是否找到图标
+    """
+    if screenshot is None:
+        screenshot = pyautogui.screenshot()
+        # print("屏幕尺寸是：",pyautogui.size())
+        screenshot = cv2.cvtColor(np.array(screenshot), cv2.COLOR_RGB2BGR)
+
+    icon = cv2.imread(icon_path, cv2.IMREAD_UNCHANGED)
+    result = cv2.matchTemplate(screenshot, icon, cv2.TM_CCOEFF_NORMED)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+
+    if max_val >= threshold:
+        # 计算图标中心坐标
+        icon_height, icon_width = icon.shape[:2]
+        center_x = max_loc[0] + icon_width // 2
+        center_y = max_loc[1] + icon_height // 2
+        print(f"找到图标：{icon_path}，匹配度：{max_val}，中心坐标：({center_x}, {center_y})")
+        pyautogui.moveTo(center_x, center_y)
+        return (center_x, center_y)
+    else:
+        print(f"未找到图标：{icon_path}，匹配度：{max_val}")
+        return None
 def find_icon(icon_path, confidence=0.9):
     """
     查找图标
@@ -31,13 +64,14 @@ def find_icon(icon_path, confidence=0.9):
     :return: 是否找到图标
     """
     try:
-        icon_location = pyautogui.locateOnScreen(icon_path, confidence=confidence)
+        # icon_location = pyautogui.locateOnScreen(icon_path, confidence=confidence)
+        icon_location = find_icon_with_opencv(icon_path, threshold=confidence)
         if icon_location:
             print(f"找到图标：{icon_path}，置信度：{confidence}")
-            return True
+            return icon_location
         else:
             print(f"未找到图标：{icon_path}，置信度：{confidence}")
-            return False
+            return None
     except Exception as e:
         print(f"发生错误：{e}")
         return False
@@ -62,10 +96,26 @@ def close_mspaint(process):
     :param process: mspaint 进程对象
     """
     try:
-        process.terminate()
+        # 使用 taskkill 强制关闭 mspaint
+        subprocess.run(["taskkill", "/F", "/IM", "mspaint.exe"], check=True)
         print("已关闭 mspaint")
-    except Exception as e:
+    except subprocess.CalledProcessError as e:
         print(f"关闭 mspaint 时发生错误：{e}")
+
+def find_confidence(icon_path,confidence):
+    # 尝试不同的置信度
+    while confidence >= 0:
+        if find_icon(icon_path, confidence):
+            # 找到图标，更新置信度
+            print(f"最终置信度：{confidence}")
+            # close_mspaint(process)
+            return confidence
+        else:
+            # 未找到图标，降低置信度
+            confidence -= 0.1
+            print(f"降低置信度到:{confidence}")
+            confidence = round(confidence, 1)  # 保留一位小数
+
 
 def test_icon_recognition(config_file):
     """
@@ -87,28 +137,71 @@ def test_icon_recognition(config_file):
         if not process:
             continue
         
-        time.sleep(5)  # 等待 mspaint 完全打开
+        time.sleep(1)  # 等待 mspaint 完全打开
         
         # 尝试不同的置信度
-        while confidence >= 0:
-            if find_icon(icon_path, confidence):
-                # 找到图标，更新置信度
-                file_info['confidence'] = confidence
-                save_config(config_file, config)
-                print(f"更新置信度：{confidence}")
-                break
-            else:
-                # 未找到图标，降低置信度
-                confidence -= 0.1
-                confidence = round(confidence, 1)  # 保留一位小数
+        confidence=find_confidence(icon_path,confidence)
+
+        # 找到图标，更新置信度
+        file_info['confidence'] = confidence
+        save_config(config_file, config)
         
         # 关闭 mspaint
         close_mspaint(process)
-        time.sleep(2)  # 等待 mspaint 关闭
+
+def thread_proces(icon_path):
+    """存储每个线程返回的结果"""
+    global result
+    confidence=find_confidence(icon_path,0.9)
+    result[icon_path]=confidence
+
+def main():
+    """
+    主函数
+    """
+    config_file = 'config.json'  # 配置文件路径
+    config = load_config(config_file)
+
+    global namedict
+    for file_info in config['files']:
+        icon_path = file_info['file_path']
+        name = file_info['name']
+        namedict[name]=icon_path
+
+    # 输入多个图片名称，用“|”隔开
+    input_icons = input("请输入要识别的图片名称（用|隔开）：").strip().split('|')
+    input_icons = [namedict[icon] for icon in input_icons if icon.strip()]
+
+    # 创建线程列表
+    threads = []
+    for icon_path in input_icons:
+        thread = Thread(target=thread_proces, args=(icon_path))
+        threads.append(thread)
+        thread.start()
+
+    # 等待所有线程完成
+    for thread in threads:
+        thread.join()
+
+    for file_info in config['files']:
+        icon_path = file_info['file_path']
+        confidence=file_info['confidence']
+        new_confidence=result.get(icon_path,confidence)
+        file_info['confidence']=new_confidence
+    save_config(config_file, config)
+
+    print("所有图标识别完成，配置文件已更新。")
+
 
 # 示例使用
 if __name__ == "__main__":
     config_file = 'config.json'  # 配置文件路径
     
     # 调用测试函数
-    test_icon_recognition(config_file)
+    # test_icon_recognition(config_file)
+
+    # icon_path=r"icon\wenyadanlianfa.png"
+    # find_confidence(icon_path,1)
+
+    main()
+

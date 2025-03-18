@@ -22,7 +22,7 @@
             "category": "枪",
             "file_path": "icon\\baozhakuosan.png",
             "weight": 2,
-            "confidence": 0.2
+            "confidence": 0.9
         },
         {
             "name": "冰暴增伤",
@@ -446,7 +446,7 @@
             "category": "默认",
             "file_path": "icon\\button\\0-2queding.png",
             "weight": 1,
-            "confidence": 0.8
+            "confidence": 0.9
         },
         {
             "name": "技能名称",
@@ -501,8 +501,8 @@
             "description": "挑战按钮，用于元素塔",
             "category": "按钮",
             "file_path": "icon\\button\\tiaozhan.png",
-            "weight": 1,
-            "confidence": 0.8
+            "weight": 0,
+            "confidence": 0.9
         },
         {
             "name": "选择技能",
@@ -510,7 +510,7 @@
             "category": "按钮",
             "file_path": "icon\\button\\xuan-ze-ji-neng.png",
             "weight": 0,
-            "confidence": 0.75
+            "confidence": 0.9
         },
         {
             "name": "电极柱",
