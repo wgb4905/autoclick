@@ -3,6 +3,7 @@
 import json
 import pandas as pd
 import json
+import os
 
 def load_config(config_file):
     """
@@ -171,7 +172,7 @@ if __name__ == "__main__":
 
     config=load_config(json_file)
     
-    switch=input('请选择：\n1:json转excel\n2excel转json\n:').strip()
+    switch=input('请选择：\n1:json转excel\n2:excel转json\n:').strip()
     if switch== '1':
         # 调用函数，将 JSON 转换为 Excel
         json_to_excel(json_file, excel_file)

@@ -115,15 +115,23 @@ def main():
     for file_info in config['files']:
         icon_path = file_info['file_path']
         name = file_info['name']
-        namedict[name]=icon_path
+        type = file_info['type']
+        namedict[(name,type)]=icon_path
 
     # 输入多个图片名称，用“|”隔开
+    type=input("图中有几个技能(默认3)：")
+    if type.strip()=='\n' or not type:
+        type=3
+    else:
+        type=int(type)
+        
+    # print(f"type:{type}" )
     input_icons = input("请输入要识别的图片名称（用|隔开）：").strip().split('|')
     input_icons = [icon for icon in input_icons if icon.strip()]
     icon_paths=[]
     for icon in input_icons:
-        if icon in namedict.keys():
-            icon_paths.append(namedict[icon])
+        if (icon,type) in namedict.keys():
+            icon_paths.append(namedict[(icon,type)])
         else:
             inputs=input(f'未录入{icon}，是否录入？录入请输入：是/否？')
             if inputs.strip() != '是':
@@ -135,15 +143,16 @@ def main():
             category=input("请输入类别：")
             if category :
                 item["category"]=category
+            item["type"]=type
             file_path=input("请输入文件路径：")
             if file_path :
+                file_path=os.path.join('icon',type,file_path)
                 item["file_path"]=file_path
             weight=input("请输入权重 1-10：")
             if weight :
                 item["weight"]=weight
-            confidence=input("请输入置信度：")
-            if confidence :
-                item["confidence"]=confidence
+            
+            item["confidence"]=0.9
 
             add_item(config_file,item)
             config["files"].append(item)
