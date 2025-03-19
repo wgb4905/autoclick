@@ -3,6 +3,38 @@
 import os
 import pyautogui
 import time
+import cv2
+import numpy as np
+
+
+def find_icon_with_opencv(icon_path, screenshot=None, threshold=0.8):
+    """
+    使用 OpenCV 进行模板匹配查找图标
+    :param icon_path: 图标文件路径
+    :param screenshot: 屏幕截图（可选）
+    :param threshold: 匹配阈值
+    :return: 是否找到图标
+    """
+    if screenshot is None:
+        screenshot = pyautogui.screenshot()
+        # print("屏幕尺寸是：",pyautogui.size())
+        screenshot = cv2.cvtColor(np.array(screenshot), cv2.COLOR_RGB2BGR)
+
+    icon = cv2.imread(icon_path, cv2.IMREAD_UNCHANGED)
+    result = cv2.matchTemplate(screenshot, icon, cv2.TM_CCOEFF_NORMED)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+
+    if max_val >= threshold:
+        # 计算图标中心坐标
+        icon_height, icon_width = icon.shape[:2]
+        center_x = max_loc[0] + icon_width // 2
+        center_y = max_loc[1] + icon_height // 2
+        print(f"找到图标：{icon_path}，匹配度：{max_val}，中心坐标：({center_x}, {center_y})")
+        pyautogui.moveTo(center_x, center_y)
+        return (center_x, center_y)
+    else:
+        print(f"未找到图标：{icon_path}，匹配度：{max_val}")
+        return None
 
 def find_icon(icon_path, confidence=0.9):
     """
@@ -15,7 +47,9 @@ def find_icon(icon_path, confidence=0.9):
     try:
         # print(f"寻找图标：{icon_path}")
         # 在桌面上查找图标，使用 confidence 参数降低识别精度
-        icon_location = pyautogui.locateOnScreen(icon_path, confidence=confidence)
+        # icon_location = pyautogui.locateOnScreen(icon_path, confidence=confidence)
+        #使用opencv方法
+        icon_location = find_icon_with_opencv(icon_path, threshold=confidence)
         if icon_location:
             # 如果找到图标，将其路径添加到列表中
             print(f"找到图标：{icon_path}，置信度：{confidence}")
@@ -36,13 +70,13 @@ def click_icon(icon_path, delay=0, confidence=0.9):
     try:
         # 在屏幕上查找图标，使用 confidence 参数降低识别精度
         print(f"开始点击{icon_path}")
-        icon_location = pyautogui.locateOnScreen(icon_path, confidence=confidence)
+        icon_location = find_icon_with_opencv(icon_path, threshold=confidence)
         if icon_location:
             # 获取图标的中心位置
-            icon_center = pyautogui.center(icon_location)
+            # icon_center = pyautogui.center(icon_location)
 
             # 移动鼠标到图标中心位置
-            pyautogui.moveTo(icon_center.x, icon_center.y)
+            pyautogui.moveTo(icon_location[0], icon_location[0])
 
             # 等待指定的时间
             time.sleep(delay)

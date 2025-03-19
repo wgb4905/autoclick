@@ -76,7 +76,7 @@ def test_click_kaishi():
 # 示例使用
 if __name__ == "__main__":
     # 测试所有函数
-    # test_find_jineng()
+    test_find_jineng()
     # test_click_jineng()
     # test_double_select()
     # test_cal_jinengs()

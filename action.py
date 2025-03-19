@@ -4,6 +4,7 @@ import json
 # 加载置信度
 confidence_dict = {}
 with open('confidence_dict.json', 'r', encoding='utf-8') as f:
+    print('初始化confidence_dict')
     confidence_dict = json.load(f)
 
 def get_confidence(icon_path):

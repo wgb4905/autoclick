@@ -46,10 +46,10 @@
             "category": "冰暴",
             "file_path": "icon\\bingbaofashengqi.png",
             "weight": 10,
-            "confidence": 0.9
+            "confidence": 0.6
         },
         {
-            "name": "技能",
+            "name": "冰霜爆炸",
             "description": "描述",
             "category": "冰暴",
             "file_path": "icon\\bingshuangbaozha.png",
@@ -57,7 +57,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "长效蓄能",
             "description": "描述",
             "category": "无人机",
             "file_path": "icon\\chang-xiao-xu-neng.png",
@@ -65,7 +65,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "低温穿透",
             "description": "描述",
             "category": "干冰弹",
             "file_path": "icon\\di-wen-chuan-tou.png",
@@ -73,7 +73,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "干冰弹增伤",
             "description": "描述",
             "category": "干冰弹",
             "file_path": "icon\\gan-bing-dan-zeng-shang.png",
@@ -81,7 +81,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "干冰弹",
             "description": "描述",
             "category": "干冰弹",
             "file_path": "icon\\ganbingdan.png",
@@ -89,7 +89,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "干冰弹连发",
             "description": "描述",
             "category": "干冰弹",
             "file_path": "icon\\ganbingdanlianfa.png",
@@ -97,7 +97,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "干冰弹齐射",
             "description": "描述",
             "category": "干冰弹",
             "file_path": "icon\\ganbingdanqishe.png",
@@ -105,7 +105,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "高能射线",
             "description": "描述",
             "category": "射线",
             "file_path": "icon\\gao-nen-she-xian.png",
@@ -113,7 +113,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "焦土政策",
             "description": "描述",
             "category": "车",
             "file_path": "icon\\jiao-tu-zheng-ce.png",
@@ -121,7 +121,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "急冻寒冰",
             "description": "描述",
             "category": "干冰弹",
             "file_path": "icon\\jidonghanbing.png",
@@ -129,7 +129,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "急速冲锋",
             "description": "描述",
             "category": "车",
             "file_path": "icon\\jisuchongfeng.png",
@@ -137,7 +137,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "连发",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\lian-fa.png",
@@ -145,7 +145,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "连续出击",
             "description": "描述",
             "category": "车",
             "file_path": "icon\\lian-xu-chu-ji.png",
@@ -153,7 +153,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "齐射",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\qi-she.png",
@@ -161,7 +161,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "燃油弹",
             "description": "描述",
             "category": "燃油弹",
             "file_path": "icon\\ranyoudan.png",
@@ -169,7 +169,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "热能爆发",
             "description": "描述",
             "category": "温压弹",
             "file_path": "icon\\re-neng-bao-fa.png",
@@ -177,7 +177,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "散射小冰弹",
             "description": "描述",
             "category": "干冰弹",
             "file_path": "icon\\sanshexiaobingdan.png",
@@ -185,7 +185,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "伤害增幅",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\shanghaizengfu.png",
@@ -193,15 +193,15 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "温压弹连发",
             "description": "描述",
             "category": "温压弹",
             "file_path": "icon\\wenyadanlianfa.png",
             "weight": 5,
-            "confidence": 0.9
+            "confidence": 0.7
         },
         {
-            "name": "技能",
+            "name": "无人机冲击",
             "description": "描述",
             "category": "无人机",
             "file_path": "icon\\wu-ren-ji-chong-ji.png",
@@ -209,7 +209,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "压缩气刃",
             "description": "描述",
             "category": "风刃",
             "file_path": "icon\\ya-suo-qi-ren.png",
@@ -217,7 +217,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "增伤利刃",
             "description": "描述",
             "category": "无人机",
             "file_path": "icon\\zeng-shang-li-ren.png",
@@ -241,7 +241,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "重冰穿透",
             "description": "描述",
             "category": "干冰弹",
             "file_path": "icon\\zhong-bing-chuan-tou.png",
@@ -249,7 +249,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "重型坦克",
             "description": "描述",
             "category": "车",
             "file_path": "icon\\zhongxingtanke.png",
@@ -257,7 +257,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "子弹爆炸",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\zidanbaozha.png",
@@ -265,7 +265,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "子弹穿透",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\zidanchuantou.png",
@@ -273,7 +273,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "冰冻侵袭",
             "description": "描述",
             "category": "干冰弹",
             "file_path": "icon\\bing-dong-qing-xi.png",
@@ -281,7 +281,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "次级子弹增伤",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\ci-ji-zi-dan-zeng-shang.png",
@@ -289,7 +289,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "分裂子弹四射",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\fen-lie-zi-dan-si-she.png",
@@ -297,7 +297,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "风力加强",
             "description": "描述",
             "category": "风",
             "file_path": "icon\\feng-li-jia-qiang.png",
@@ -305,7 +305,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "分裂子弹爆炸",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\feng-lie-zi-dan-bao-zha.png",
@@ -313,7 +313,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "高速飞行",
             "description": "描述",
             "category": "无人机",
             "file_path": "icon\\gao-su-fei-xing.png",
@@ -321,7 +321,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "急冻子弹",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\ji-dong-zi-dan.png",
@@ -329,7 +329,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "急速射击",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\ji-su-she-ji.png",
@@ -337,7 +337,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "空投轰炸",
             "description": "描述",
             "category": "空投",
             "file_path": "icon\\kong-tou-hong-zha.png",
@@ -345,7 +345,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "全子弹增幅",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\quan-zi-dan-zeng-fu.png",
@@ -353,15 +353,15 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "热能引燃",
             "description": "描述",
             "category": "温压弹",
-            "file_path": "icon\\ren-neng-ying-ran.png",
+            "file_path": "icon\\re-neng-ying-ran.png",
             "weight": 5,
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "势不可挡",
             "description": "描述",
             "category": "车",
             "file_path": "icon\\shi-bu-ke-dang.png",
@@ -369,15 +369,15 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "旋风加农",
             "description": "描述",
             "category": "风",
             "file_path": "icon\\xuan-feng-jia-nong.png",
             "weight": 10,
-            "confidence": 0.9
+            "confidence": 0.6
         },
         {
-            "name": "技能",
+            "name": "漩涡增压",
             "description": "描述",
             "category": "风",
             "file_path": "icon\\xuan-wo-zeng-ya.png",
@@ -385,7 +385,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "子弹分裂",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\zi-dan-feng-lie.png",
@@ -393,7 +393,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "子弹弹射",
             "description": "描述",
             "category": "枪",
             "file_path": "icon\\zi-dan-tan-she.png",
@@ -401,7 +401,7 @@
             "confidence": 0.9
         },
         {
-            "name": "技能",
+            "name": "急速冲锋",
             "description": "描述",
             "category": "车",
             "file_path": "icon\\ji-su-chong-feng.png",
@@ -425,17 +425,17 @@
             "confidence": 0.9
         },
         {
-            "name": "技能名称",
+            "name": "电磁分流",
             "description": "默认技能描述",
-            "category": "默认",
+            "category": "电",
             "file_path": "icon\\dian-ci-feng-liu.png",
             "weight": 1,
             "confidence": 0.9
         },
         {
-            "name": "技能名称",
-            "description": "默认技能描述",
-            "category": "默认",
+            "name": "火势扩散",
+            "description": "范围+100%",
+            "category": "燃油弹",
             "file_path": "icon\\huo-shi-kuo-san.png",
             "weight": 1,
             "confidence": 0.9
@@ -443,57 +443,57 @@
         {
             "name": "0-2确认",
             "description": "默认技能描述",
-            "category": "默认",
+            "category": "按钮",
             "file_path": "icon\\button\\0-2queding.png",
-            "weight": 1,
+            "weight": 0,
             "confidence": 0.9
         },
         {
-            "name": "技能名称",
+            "name": "2-2确认",
             "description": "默认技能描述",
-            "category": "默认",
+            "category": "按钮",
             "file_path": "icon\\button\\2-2queding.png",
-            "weight": 1,
+            "weight": 0,
             "confidence": 0.9
         },
         {
-            "name": "技能名称",
+            "name": "点击空白处关闭",
             "description": "默认技能描述",
-            "category": "默认",
+            "category": "按钮",
             "file_path": "icon\\button\\dianjikongbai.png",
-            "weight": 1,
+            "weight": 0,
             "confidence": 0.9
         },
         {
-            "name": "技能名称",
+            "name": "返回",
             "description": "默认技能描述",
-            "category": "默认",
+            "category": "按钮",
             "file_path": "icon\\button\\fan-hui-ye-mian.png",
-            "weight": 1,
+            "weight": 0,
             "confidence": 0.9
         },
         {
             "name": "开始游戏",
             "description": "默认技能描述",
-            "category": "默认",
+            "category": "按钮",
             "file_path": "icon\\button\\kai-shi-you-xi.png",
-            "weight": 1,
+            "weight": 0,
             "confidence": 0.9
         },
         {
-            "name": "技能名称",
+            "name": "入场词条",
             "description": "默认技能描述",
-            "category": "默认",
+            "category": "按钮",
             "file_path": "icon\\button\\ru-chang-ci-tiao.png",
-            "weight": 1,
+            "weight": 0,
             "confidence": 0.9
         },
         {
-            "name": "技能名称",
+            "name": "刷新",
             "description": "默认技能描述",
-            "category": "默认",
+            "category": "按钮",
             "file_path": "icon\\button\\shuaxin.png",
-            "weight": 1,
+            "weight": 0,
             "confidence": 0.9
         },
         {
@@ -526,6 +526,46 @@
             "category": "跃迁电子",
             "file_path": "icon\\yue-qian-dain-zi.png",
             "weight": 10,
+            "confidence": 0.9
+        },
+        {
+            "name": "火焰子弹",
+            "description": "火焰子弹",
+            "category": "子弹",
+            "file_path": "icon\\huo-yan-zi-dan.png",
+            "weight": 1,
+            "confidence": 0.9
+        },
+        {
+            "name": "猛烈震荡",
+            "description": "无人机晕眩2秒",
+            "category": "无人机",
+            "file_path": "icon\\meng-lie-zhen-dang.png",
+            "weight": 1,
+            "confidence": 0.9
+        },
+        {
+            "name": "烈焰无人机",
+            "description": "无人机点燃3秒",
+            "category": "无人机",
+            "file_path": "icon\\lie-yan-wu-ren-ji.png",
+            "weight": 1,
+            "confidence": 0.9
+        },
+        {
+            "name": "热能爆炸",
+            "description": "温压弹爆炸伤害+80%",
+            "category": "温压弹",
+            "file_path": "icon\\wen-ya-bao-zha.png",
+            "weight": 5,
+            "confidence": 0.9
+        },
+        {
+            "name": "制导激光",
+            "description": "学习制导激光",
+            "category": "激光",
+            "file_path": "icon\\zhi-dao-ji-guang.png",
+            "weight": "10",
             "confidence": 0.9
         }
     ]
