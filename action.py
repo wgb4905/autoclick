@@ -16,7 +16,7 @@ def get_confidence(icon_path):
     return confidence_dict.get(icon_path, 0.9)
 
 def find_jineng():
-    icon = r'icon\button\xuan-ze-ji-neng.png'
+    icon = r'icon\1\xuan-ze-ji-neng.png'
     return find_icon(icon, get_confidence(icon))
 
 def click_jineng(icon_paths,total=1):
@@ -29,35 +29,36 @@ def click_jineng(icon_paths,total=1):
     return False
 
 def double_select():
-    icon = r'icon\button\2-2queding.png'
+    icon = r'icon\1\2-2queding.png'
+    print(get_confidence(icon))
     return click_icon(icon, get_confidence(icon))
 
 def cal_jinengs():
-    icon = r'icon\button\0-2queding.png'
+    icon = r'icon\1\0-2queding.png'
     if find_icon(icon, get_confidence(icon)):
         return 2
     return 1
 
 def find_jiesuan():
-    icon = r'icon\button\fan-hui-ye-mian.png'
+    icon = r'icon\1\fan-hui-ye-mian.png'
     return find_icon(icon, get_confidence(icon))
 
 def select_jiesuan():
-    icon = r'icon\button\fan-hui-ye-mian.png'
+    icon = r'icon\1\fan-hui-ye-mian.png'
     click_icon(icon, get_confidence(icon))
 
 def find_tiaozhan():
-    icon = r'icon\button\tiaozhan.png'
+    icon = r'icon\1\tiaozhan.png'
     return find_icon(icon, get_confidence(icon))
 
 def click_tiaozhan():
-    icon = r'icon\button\tiaozhan.png'
+    icon = r'icon\1\tiaozhan.png'
     click_icon(icon, get_confidence(icon))
 
 def find_kaishi():
-    icon = r'icon\button\kai-shi-you-xi.png'
+    icon = r'icon\1\kai-shi-you-xi.png'
     return find_icon(icon, get_confidence(icon))
 
 def click_kaishi():
-    icon = r'icon\button\kai-shi-you-xi.png'
+    icon = r'icon\1\kai-shi-you-xi.png'
     return click_icon(icon, get_confidence(icon))

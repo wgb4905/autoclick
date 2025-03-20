@@ -132,7 +132,7 @@
             "category": "车",
             "file_path": "icon\\4\\jiao-tu-zheng-ce.png",
             "weight": 10,
-            "confidence": 0.9,
+            "confidence": 0.6,
             "type": 4
         },
         {
@@ -222,7 +222,7 @@
             "category": "温压弹",
             "file_path": "icon\\4\\wenyadanlianfa.png",
             "weight": 5,
-            "confidence": 0.7,
+            "confidence": 0.9,
             "type": 4
         },
         {
@@ -465,7 +465,7 @@
             "category": "温压弹",
             "file_path": "icon\\4\\wen-ya-chong-ji.png",
             "weight": 1,
-            "confidence": 0.9,
+            "confidence": 0.7,
             "type": 4
         },
         {
@@ -474,7 +474,7 @@
             "category": "电",
             "file_path": "icon\\4\\dian-ci-chuan-ci.png",
             "weight": 10,
-            "confidence": 0.9,
+            "confidence": 0.8,
             "type": 4
         },
         {
@@ -508,16 +508,16 @@
             "name": "2-2确认",
             "description": "默认技能描述",
             "category": "按钮",
-            "file_path": "icon\\1\\yue-qian-dain-zi.png",
+            "file_path": "icon\\1\\2-2queding.png",
             "weight": 0,
-            "confidence": 0.9,
+            "confidence": 0.8,
             "type": 1
         },
         {
             "name": "点击空白处关闭",
             "description": "默认技能描述",
             "category": "按钮",
-            "file_path": "icon\\1\\huo-yan-zi-dan.png",
+            "file_path": "icon\\1\\dianjikongbai.png",
             "weight": 0,
             "confidence": 0.9,
             "type": 1
@@ -526,7 +526,7 @@
             "name": "返回",
             "description": "默认技能描述",
             "category": "按钮",
-            "file_path": "icon\\1\\meng-lie-zhen-dang.png",
+            "file_path": "icon\\1\\fan-hui-ye-mian.png",
             "weight": 0,
             "confidence": 0.9,
             "type": 1
@@ -535,7 +535,7 @@
             "name": "开始游戏",
             "description": "默认技能描述",
             "category": "按钮",
-            "file_path": "icon\\1\\lie-yan-wu-ren-ji.png",
+            "file_path": "icon\\1\\kai-shi-you-xi.png",
             "weight": 0,
             "confidence": 0.9,
             "type": 1
@@ -544,7 +544,7 @@
             "name": "入场词条",
             "description": "默认技能描述",
             "category": "按钮",
-            "file_path": "icon\\1\\wen-ya-bao-zha.png",
+            "file_path": "icon\\1\\ru-chang-ci-tiao.png",
             "weight": 0,
             "confidence": 0.9,
             "type": 1
@@ -553,7 +553,7 @@
             "name": "刷新",
             "description": "默认技能描述",
             "category": "按钮",
-            "file_path": "icon\\1\\zhi-dao-ji-guang.png",
+            "file_path": "icon\\1\\shuaxin.png",
             "weight": 0,
             "confidence": 0.9,
             "type": 1
@@ -562,7 +562,7 @@
             "name": "挑战",
             "description": "挑战按钮，用于元素塔",
             "category": "按钮",
-            "file_path": "icon\\1\\bing-zi-dan-si-feng-lie.png",
+            "file_path": "icon\\1\\tiaozhan.png",
             "weight": 0,
             "confidence": 0.9,
             "type": 1
@@ -591,7 +591,7 @@
             "category": "跃迁电子",
             "file_path": "icon\\4\\yue-qian-dain-zi.png",
             "weight": 10,
-            "confidence": 0.9,
+            "confidence": 0.8,
             "type": 4
         },
         {
@@ -618,7 +618,7 @@
             "category": "无人机",
             "file_path": "icon\\4\\lie-yan-wu-ren-ji.png",
             "weight": 1,
-            "confidence": 0.9,
+            "confidence": 0.7,
             "type": 4
         },
         {
@@ -627,7 +627,7 @@
             "category": "温压弹",
             "file_path": "icon\\4\\wen-ya-bao-zha.png",
             "weight": 5,
-            "confidence": 0.9,
+            "confidence": 0.8,
             "type": 4
         },
         {
@@ -789,7 +789,7 @@
             "category": "车",
             "file_path": "icon\\3\\zhimingchongzhuang.png",
             "weight": 1,
-            "confidence": 0.9,
+            "confidence": 0.6,
             "type": 3
         },
         {
@@ -843,6 +843,132 @@
             "category": "车",
             "file_path": "icon\\3\\zengshangzhuangzhi.png",
             "weight": 1,
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "重装机型",
+            "description": "无人机大小增加60%",
+            "category": "无人机",
+            "file_path": "icon\\4\\zhong-zhuang-ji-xing.png",
+            "weight": "2",
+            "confidence": 0.9,
+            "type": 4
+        },
+        {
+            "name": "冰暴增伤",
+            "description": "默认技能描述",
+            "category": "冰暴",
+            "file_path": "icon\\3\\bing-bao-zeng-shang.png",
+            "weight": "5",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "热能引燃",
+            "description": "默认技能描述",
+            "category": "温压弹",
+            "file_path": "icon\\3\\re-neng-yin-ran.png",
+            "weight": "5",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "致残碾压",
+            "description": "默认技能描述",
+            "category": "车",
+            "file_path": "icon\\3\\zhi-can-nian-ya.png",
+            "weight": "2",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "散射小冰弹",
+            "description": "默认技能描述",
+            "category": "干冰弹",
+            "file_path": "icon\\3\\san-she-xiao-bing-dan.png",
+            "weight": "2",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "伤害增幅",
+            "description": "默认技能描述",
+            "category": "枪",
+            "file_path": "icon\\3\\shang-hai-zeng-fu.png",
+            "weight": "10",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "电磁子弹",
+            "description": "默认技能描述",
+            "category": "枪",
+            "file_path": "icon\\3\\daincizidan.png",
+            "weight": "1",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "分裂子弹",
+            "description": "默认技能描述",
+            "category": "枪",
+            "file_path": "icon\\3\\fenliezidan.png",
+            "weight": "10",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "爆炸增伤",
+            "description": "默认技能描述",
+            "category": "枪",
+            "file_path": "icon\\3\\baozhazengshang.png",
+            "weight": "5",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "全子弹增幅",
+            "description": "默认技能描述",
+            "category": "枪",
+            "file_path": "icon\\3\\quanzidanzengshang.png",
+            "weight": "10",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "温压弹连发",
+            "description": "默认技能描述",
+            "category": "温压弹",
+            "file_path": "icon\\3\\wenyadanlianfa.png",
+            "weight": "10",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "干冰弹齐射",
+            "description": "默认技能描述",
+            "category": "干冰弹",
+            "file_path": "icon\\3\\ganbingdanlianshe.png",
+            "weight": "10",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "连环冰暴",
+            "description": "默认技能描述",
+            "category": "冰暴",
+            "file_path": "icon\\3\\lianhuanbingbao.png",
+            "weight": "10",
+            "confidence": 0.9,
+            "type": 3
+        },
+        {
+            "name": "子弹穿透",
+            "description": "默认技能描述",
+            "category": "枪",
+            "file_path": "icon\\3\\zidanchuantou.png",
+            "weight": "2",
             "confidence": 0.9,
             "type": 3
         }

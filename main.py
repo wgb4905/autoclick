@@ -15,7 +15,8 @@ category_weights = {
 
 
 #0.查找图标文件（按优先级排列）
-icons = calculate_weights.query_sorted_files(category_weights)
+icons_3 = calculate_weights.query_sorted_files(category_weights,3)
+icons_4 = calculate_weights.query_sorted_files(category_weights,4)
 #加载置信度
 confidence_dict={}
 with open('confidence_dict.json', 'r', encoding='utf-8') as f:
@@ -36,6 +37,10 @@ def main():
             print("开始选择技能")
             total=action.cal_jinengs()
             print(f"需要选择{total}个技能")
+            if total==2:
+                icons=icons_4
+            else:
+                icons=icons_3
             if action.click_jineng(icons,total):
                 if total ==2 :
                     if not action.double_select():
@@ -56,10 +61,12 @@ def main():
             print("pass")
             time.sleep(1)
         
+        #调试
+        # break
         # 等待 5 秒钟
         
 
 
 if __name__ == "__main__":
     main()
-    pass
+    # pass

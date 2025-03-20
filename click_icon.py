@@ -60,7 +60,7 @@ def find_icon(icon_path, confidence=0.9):
     except Exception as e:
         print(f"发生错误：{e}")
 
-def click_icon(icon_path, delay=0, confidence=0.9):
+def click_icon(icon_path,  confidence=0.9,delay=0):
     """
     识别图标并点击
     :param icon_path: 图标的文件路径
@@ -76,7 +76,7 @@ def click_icon(icon_path, delay=0, confidence=0.9):
             # icon_center = pyautogui.center(icon_location)
 
             # 移动鼠标到图标中心位置
-            pyautogui.moveTo(icon_location[0], icon_location[0])
+            # pyautogui.moveTo(icon_location[0], icon_location[0])
 
             # 等待指定的时间
             time.sleep(delay)
@@ -97,15 +97,15 @@ if __name__ == "__main__":
     # 获取脚本所在目录
     # script_dir = os.path.dirname(os.path.abspath(__file__))
     # 图标文件路径（相对于脚本目录）
-    icon_path = r'icon\jiao-tu-zheng-ce.png'
+    icon_path = 'icon\\1\\2-2queding.png'
 
     # 鼠标移动到图标位置后到点击的间隔时间（秒）
     delay = 0
 
     # 图标匹配的置信度阈值（0 到 1）
-    confidence = 0.7  # 降低识别精度
+    confidence = 0.8  # 降低识别精度
 
-    find_icon(icon_path,0.7)
+    # find_icon(icon_path,confidence)
 
     # 调用函数
-    click_icon(icon_path, delay, confidence)
+    click_icon(icon_path, confidence, delay)

@@ -94,6 +94,7 @@ def thread_proces(icon_path):
     confidence=confidenceDict.get(icon_path,0.9)
     confidence=find_confidence(icon_path,confidence)
     if confidence>0.6:
+        result[icon_path]=confidence
         return
     check=input('是否更新置信度：是/否 ？')
     if check == '是':
@@ -112,6 +113,7 @@ def main():
     config = load_config(config_file)
 
     global namedict
+    global result
     for file_info in config['files']:
         icon_path = file_info['file_path']
         name = file_info['name']
@@ -146,7 +148,7 @@ def main():
             item["type"]=type
             file_path=input("请输入文件路径：")
             if file_path :
-                file_path=os.path.join('icon',type,file_path)
+                file_path=os.path.join('icon',str(type),file_path)
                 item["file_path"]=file_path
             weight=input("请输入权重 1-10：")
             if weight :
@@ -174,10 +176,12 @@ def main():
     # for icon_path in icon_paths:
     #     thread_proces(icon_path)
 
+    # print(result)
     for file_info in config['files']:
         icon_path = file_info['file_path']
         confidence=file_info['confidence']
         new_confidence=result.get(icon_path,confidence)
+        # print(f"{icon_path} old confidence:{confidence},new confidence:{new_confidence}")
         file_info['confidence']=new_confidence
     save_config(config_file, config)
 

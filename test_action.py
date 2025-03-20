@@ -13,7 +13,7 @@ def test_click_jineng():
     """
     测试 click_jineng 函数
     """
-    icon_paths = [r'icon\button\xuan-ze-ji-neng.png']
+    icon_paths = [r'icon\1\xuan-ze-ji-neng.png']
     result = action.click_jineng(icon_paths)
     print(f"测试 click_jineng: {'成功' if result else '失败'}")
 
@@ -76,9 +76,9 @@ def test_click_kaishi():
 # 示例使用
 if __name__ == "__main__":
     # 测试所有函数
-    test_find_jineng()
+    # test_find_jineng()
     # test_click_jineng()
-    # test_double_select()
+    test_double_select()
     # test_cal_jinengs()
     # test_find_jiesuan()
     # test_select_jiesuan()
